@@ -1,0 +1,66 @@
+
+main.main{
+    text-align: center;
+}
+main.main section h2{
+    font-size: 2rem;
+}
+main.main section ul{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+main.main section ul li{
+    width: calc((100% - 60px) / 4);
+}
+main.main section ul li a{
+    display: block;
+    overflow: hidden;
+}
+main.main section ul li a .movieImg{
+    display: block;
+    height: 350px;
+    background: url("../images/sample.png")no-repeat 50% 0 / cover;
+    transition: transform .5s ease;
+}
+
+main.main section ul li .movieTitle{
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+main.main section .moreList{
+    display: inline-block;
+    margin-top: 40px;
+}
+
+/* hover */
+@media only screen and (min-width: 1367px) {
+    main.main section ul li a:hover .movieImg{
+        transform: scale(1.2);
+    }
+}
+
+/* MEDIA QUERIES tablet */
+@media screen and (max-width: 1367px) {
+    main.main {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    main.main section ul li{
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+/* MEDIA QUERIES mobile */
+@media screen and (max-width: 769px) {
+    main.main section ul li{
+        width: 100%;
+    }
+    main.main section ul li a .movieImg{
+        height: 300px;
+    }
+}

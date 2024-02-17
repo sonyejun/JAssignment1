@@ -1,0 +1,41 @@
+<% include ./component/head.ejs %>
+    <main class="detail">
+        <div class="detailImg" style="background: url('<%- movie.thumbnail%>')no-repeat 50% 30% / cover"></div>
+        <div class="detailBox">
+            <div class="detailInnerBox">
+                <div class="leftBox">
+                    <div class="poster" style="background: url('<%- movie.poster%>')no-repeat 50% 50% / cover"></div>
+                </div>
+                <div class="rightBox">
+                    <div class="title"><%- movie.title %></div>
+                    <div class="subText genre">
+                        <div class="subTitle">Genre</div>
+                        <div id="genre"><%- movie.genre %></div>
+                    </div>
+                    <div class="subText director">
+                        <div class="subTitle">Director</div>
+                        <div id="director"><%- movie.director %></div>
+                    </div>
+                    <div class="subText actor">
+                        <div class="subTitle">Actor</div>
+                        <div id="actor"><%- movie.actor %></div>
+                    </div>
+                    <div class="subText rating">
+                        <div class="subTitle">Rating</div>
+                        <div id="rating"><%- movie.rating %></div>
+                    </div>
+                    <div class="subText date">
+                        <div class="subTitle">Date</div>
+                        <div id="date"><%- movie.date %></div>
+                    </div>
+                </div>
+            </div>
+            <div class="synopsisBox">
+                <div class="subTitle">synopsis</div>
+                <div class="synopsis" id="synopsis">
+                    <%- movie.synopsis %>
+                </div>
+            </div>
+        </div>
+    </main>
+<% include ./component/foot.ejs %>

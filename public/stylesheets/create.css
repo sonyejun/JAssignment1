@@ -1,0 +1,50 @@
+.visual.create{
+    height: 300px;
+}
+.visual.create .visualText{
+    max-width: 360px;
+}
+
+.createForm{
+    max-width: 600px;
+    min-width: 340px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 1px solid var(--95-color);
+}
+.createForm div + div{
+    margin-top: 20px;
+}
+.createForm div label{
+    display: block;
+    font-size: 1.125rem;
+}
+.createForm div input{
+    width: 100%;
+    padding: 6px 10px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+}
+.createForm div textarea{
+    width: 100%;
+    padding: 6px 10px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+    resize: none;
+    height: 150px;
+}
+.createForm button{
+    margin-top: 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    width: 100%;
+}
+@media screen and (max-width: 769px){
+    .visual.create .visualText {
+        max-width: 260px;
+    }
+}

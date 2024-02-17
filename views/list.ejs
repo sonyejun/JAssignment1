@@ -1,0 +1,25 @@
+<% include ./component/head.ejs %>
+  <div class="visual <%- title%>">
+    <!-- Source: Image source or website URL -->
+    <div class="visualBg"></div>
+    <div class="visualText">List of movies</div>
+  </div>
+
+  <div class="container">
+    <main class="list">
+      <section>
+        <ul>
+          <% movies.forEach((movie, index) => {%>
+            <li>
+              <a href="/detail/<%- movie._id %>">
+                <span class="movieImg" style="background: url('<%- movie.thumbnail%>')no-repeat 50% 50% / cover"></span>
+              </a>
+              <div class="movieTitle"><%- movie.title %></div>
+              <div class="genre"><%- movie.genre %></div>
+            </li>
+          <% }) %>
+        </ul>
+      </section>
+    </main>
+  </div>
+<% include ./component/foot.ejs %>

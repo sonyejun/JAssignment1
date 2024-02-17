@@ -1,0 +1,73 @@
+.visual.list{
+    height: 300px;
+}
+.visual.list .visualText{
+    max-width: none;
+}
+
+main.list section ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+}
+main.list section ul li{
+    width: calc((100% - 60px) / 4);
+}
+main.list section ul li a{
+    display: block;
+    overflow: hidden;
+}
+main.list section ul li a .movieImg{
+    display: block;
+    height: 350px;
+    background: url("../images/sample.png")no-repeat 50% 0 / cover;
+    transition: transform .5s ease;
+}
+
+main.list section ul li .movieTitle{
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 6px;
+}
+main.list section ul li .genre{
+    margin-top: 6px;
+    font-size: .875rem;
+    color: var(--95-color);
+}
+
+main.list section .moreList{
+    display: inline-block;
+    margin-top: 40px;
+}
+
+/* hover */
+@media only screen and (min-width: 1367px) {
+    main.list section ul li a:hover .movieImg{
+        transform: scale(1.2);
+    }
+}
+
+/* MEDIA QUERIES tablet */
+@media screen and (max-width: 1367px) {
+    main.list {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    main.list section ul li{
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+/* MEDIA QUERIES mobile */
+@media screen and (max-width: 769px) {
+    .visual.list .visualText{
+        max-width: 194px;
+    }
+    main.list section ul li{
+        width: 100%;
+    }
+    main.list section ul li a .movieImg{
+        height: 300px;
+    }
+}

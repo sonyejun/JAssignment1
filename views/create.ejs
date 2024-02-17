@@ -1,0 +1,56 @@
+<% include ./component/head.ejs %>
+    <div class="visual <%- title%>">
+        <!-- Source: Image source or website URL -->
+        <div class="visualBg"></div>
+        <div class="visualText">Register for a new movie</div>
+    </div>
+    <div class="container">
+        <form action="/api/movie/create" method="post" class="createForm">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required />
+            </div>
+
+            <div>
+                <label for="genre">Genre</label>
+                <input type="text" name="genre" id="genre" required />
+            </div>
+
+            <div>
+                <label for="director">Director</label>
+                <input type="text" name="director" id="director" required />
+            </div>
+            
+            <div>
+                <label for="actor">Actor</label>
+                <input type="text" name="actor" id="actor" required />
+            </div>
+
+            <div>
+                <label for="rating">Rating</label>
+                <input type="number" name="rating" id="rating" step="0.01" min="0" max="10" required />
+            </div>
+
+            <div>
+                <label for="">date</label>
+                <input type="date" name="date" id="date" required />
+            </div>
+
+            <div>
+                <label for="thumbnail">Thumbnail URL</label>
+                <input type="url" name="thumbnail" id="thumbnail" required />
+            </div>
+
+            <div>
+                <label for="poster">Poster URL</label>
+                <input type="url" name="poster" id="poster" required />
+            </div>
+
+            <div>
+                <label for="synopsis">synopsis</label>
+                <textarea name="synopsis" id="synopsis"></textarea>
+            </div>
+            <button type="submit" class="btn">Registration</button>
+        </form>
+    </div>
+<% include ./component/foot.ejs %>

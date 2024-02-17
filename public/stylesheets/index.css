@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Noto+Sans:wght@300;400;500;600;700;800&display=swap');
+/* Source of Google fonts: https://fonts.googleapis.com */
+/* font-family: 'Bungee Shade', sans-serif;
+font-family: 'Noto Sans', sans-serif; */
+
+
+* {
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+:root {
+  --main-color: #43C079;
+  --2b-color: #2b2b2b;
+  --95-color: #959595;
+  --ccc-color: #ccc;
+}
+
+.btn{
+  background: var(--2b-color);
+  color: #fff;
+  padding: 0.875rem 1.125rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* container */
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+
+/* header */
+header .navBar {
+  height: 60px;
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cccc;
+  font-size: 1.25rem;
+}
+header .navBar .logo {
+  font-family: 'Bungee Shade';
+}
+header .navBar nav ul {
+  display: flex;
+}
+header .navBar nav ul li + li {
+  margin-left: 20px;
+}
+header .navBar nav ul li a:hover{
+  color: var(--main-color);
+}
+
+.visual{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../images/bg.png')no-repeat 50% 50% / cover;
+  position: relative;
+}
+.visual .visualBg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.visual .visualText{
+  font-size: 2.5rem;
+  font-family: 'Bungee Shade';
+  color: var(--main-color);
+  max-width: 350px;
+  line-height: 120%;
+  position: relative;
+}
+
+/*//// footer ////*/
+footer{
+  min-height: 120px;
+  background: #888;
+}
+footer p{
+  padding: 14px 40px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 300;
+}
+
+/* hover */
+@media only screen and (min-width: 1366px) {
+  .btn:hover{
+    color: var(--main-color);
+  }
+  header .navBar .logo:hover {
+    color: var(--main-color);
+  }
+  
+  header .navBar .logo:active{
+    transform: rotateX(45deg);
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .container{
+    padding: 60px 40px;
+  }
+}
+
+/* MEDIA QUERIES mobile */
+@media screen and (max-width: 769px) {
+  .container{
+    padding: 60px 20px;
+  }
+  .visual .visualText{
+    max-width: 350px;
+  }
+  header .navBar{
+    padding: 0 20px;
+  }
+  footer p{
+    padding: 14px 20px;
+  }
+}
